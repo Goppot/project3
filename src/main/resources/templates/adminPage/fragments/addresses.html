@@ -1,0 +1,113 @@
+<div class="tab-pane" id="v-pills-AllAddresses" role="tabpanel"
+     aria-labelledby="v-pills-Users">
+    <div>
+        <h2>Доступные адреса в базе данных</h2>
+        <div class="marginTop">
+            <div class="table-responsive">
+            <div class="row">
+                <!--страна-->
+                <div class="col-4">
+                    <div class="row">
+                        <div class="col-6">
+                            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                                <input type="search" class="form-control form-control-dark"
+                                       placeholder="введите данные поиска" aria-label="Search">
+                            </form>
+                        </div>
+                        <div class="col">
+                            <div class="d-grid gap-1">
+                                <button data-bs-toggle="modal" data-bs-target="#countryAddFormModal"
+                                        class="btn btn-success">Добавить страну
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <table class="table table-striped marginTop">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Страна</th>
+                                <th>Ред.</th>
+                                <th>Удаление</th>
+                            </tr>
+                            </thead>
+                            <tbody id="countryTable">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--Город-->
+                <div class="col-8">
+                    <div class="row">
+                        <div class="col-6">
+                            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                                <input type="search" class="form-control form-control-dark"
+                                       placeholder="введите данные поиска" aria-label="Search">
+                            </form>
+                        </div>
+                        <div class="col">
+                            <div class="d-grid gap-1">
+                                <button data-bs-toggle="modal" data-bs-target="#cityAddFormModal"
+                                        class="btn btn-success">Добавить город
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <table class="table table-striped marginTop">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Город</th>
+                                <th>Страна</th>
+                                <th>Ред.</th>
+                                <th>Удаление</th>
+                            </tr>
+                            </thead>
+                            <tbody id="cityTable">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+                <!--адрес-->
+                <div >
+                    <div class="row">
+                        <div class="col-6">
+                            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                                <input type="search" class="form-control form-control-dark"
+                                       placeholder="введите данные поиска" aria-label="Search">
+                            </form>
+                        </div>
+                        <div class="col">
+                            <div class="d-grid gap-1">
+                                <button data-bs-toggle="modal" data-bs-target="#addressAddFormModal"
+                                        class="btn btn-success">Добавить адресс
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <table class="table table-striped marginTop">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Индекс</th>
+                                <th>Страна</th>
+                                <th>Город</th>
+                                <th>Улица</th>
+                                <th>Дом</th>
+                                <th>Ред.</th>
+                                <th>Удаление</th>
+                            </tr>
+                            </thead>
+                            <tbody id="addressTable">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

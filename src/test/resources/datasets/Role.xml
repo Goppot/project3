@@ -1,0 +1,5 @@
+<dataset>
+    <role id="1" role_name="Admin" />
+    <role id="2" role_name="Moderator" />
+    <role id="3" role_name="User" />
+</dataset>

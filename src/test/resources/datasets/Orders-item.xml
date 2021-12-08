@@ -1,0 +1,8 @@
+<dataset>
+    <orders_item orders_id="1" item_id="1" />
+    <orders_item orders_id="1" item_id="2" />
+    <orders_item orders_id="2" item_id="3" />
+    <orders_item orders_id="2" item_id="4" />
+    <orders_item orders_id="3" item_id="5" />
+    <orders_item orders_id="3" item_id="6" />
+</dataset>

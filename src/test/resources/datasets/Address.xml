@@ -1,0 +1,8 @@
+<dataset>
+    <address id="1" city_index="123456" house="user1_house" street="user1_street" city_id="1" country_id="1" />
+    <address id="2" city_index="123456" house="user2_house" street="user2_street" city_id="2" country_id="1" />
+    <address id="3" city_index="123456" house="user3_house" street="user3_street" city_id="3" country_id="1" />
+    <address id="4" city_index="123456" house="user4_house" street="user4_street" city_id="4" country_id="2" />
+    <address id="5" city_index="123456" house="user5_street" street="user5_street" city_id="5" country_id="2" />
+    <address id="6" city_index="123456" house="user6_street" street="user6_street" city_id="6" country_id="2" />
+</dataset>

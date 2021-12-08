@@ -1,0 +1,10 @@
+<dataset>
+    <item id="1" count="100" description="item1_description" discount="0" is_moderate_accept="0" is_moderated="0" pretendent_to_be_deleted="0" name="item1" price="111111.00" rating="1.0" />
+    <item id="2" count="200" description="item2_description" discount="0" is_moderate_accept="0" is_moderated="0" pretendent_to_be_deleted="0" name="item2" price="222222.00" rating="2.0" />
+    <item id="3" count="300" description="item3_description" discount="0" is_moderate_accept="0" is_moderated="0" pretendent_to_be_deleted="0" name="item3" price="333333.00" rating="3.0" />
+    <item id="4" count="400" description="item4_description" discount="0" is_moderate_accept="0" is_moderated="0" pretendent_to_be_deleted="0" name="item4" price="444444.00" rating="4.0" />
+    <item id="5" count="500" description="item5_description" discount="0" is_moderate_accept="0" is_moderated="0" pretendent_to_be_deleted="0" name="item5" price="555555.00" rating="5.0" />
+    <item id="6" count="600" description="item6_description" discount="0" is_moderate_accept="0" is_moderated="0" pretendent_to_be_deleted="0" name="item6" price="666666.00" rating="6.0" />
+</dataset>
+
+

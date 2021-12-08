@@ -1,0 +1,127 @@
+<div id="userEditModal" class="modal fade" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editModalLabel">Редактирование пользователя</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="container modal-body">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group marginTop">
+                            <label>ID:</label>
+                            <input type="text" class="form-control"
+                                   id="userIdEdit" name="userIdEdit" readonly>
+                        </div>
+                        <div class="form-group marginTop">
+                            <label>Имя пользователя:</label>
+                            <input type="text" class="form-control"
+                                   id="userNameEdit" name="userNameEdit">
+                        </div>
+                        <div class="form-group marginTop">
+                            <label>Электронная почта:</label>
+                            <input type="email" class="form-control"
+                                   id="userEmailEdit"
+                                   name="userEmailEdit">
+                        </div>
+                        <div class="form-group marginTop">
+                            <label>Пароль:</label>
+                            <input type="password" class="form-control"
+                                   id="userPasswordEdit" name="userPasswordEdit">
+                        </div>
+                        <div class="form-group marginTop">
+                            <label>Код активации:</label>
+                            <input type="text" class="form-control"
+                                   id="userActiveCodeEdit" name="userActiveCodeEdit">
+                        </div>
+                        <div class="form-group marginTop">
+                            <label>Телефон:</label>
+                            <input type="number" class="form-control"
+                                   id="phoneNumberEdit" name="phoneNumberEdit">
+                        </div>
+                        <div class="form-group marginTop">
+                            <label>Имя:</label>
+                            <input type="text" class="form-control"
+                                   id="userFirstNameEdit" name="userFirstNameEdit">
+                        </div>
+                        <div class="form-group marginTop">
+                            <label>Фамилия:</label>
+                            <input type="text" class="form-control"
+                                   id="userLastNameEdit" name="userLastNameEdit">
+                        </div>
+                        <div class="form-group marginTop">
+                            <label>Возраст:</label>
+                            <input type="text" class="form-control"
+                                   id="userAgeEdit" name="userAgeEdit">
+                        </div>
+                        <div class="form-group marginTop">
+                            <label>Адрес:</label>
+                            <input type="text" class="form-control"
+                                   id="userAddressEdit" name="userAddressEdit">
+                        </div>
+                        <div class="form-group marginTop">
+                            <label>Пол:</label>
+                            <input type="text" class="form-control"
+                                   id="userGenderEdit" name="userGenderEdit">
+                        </div>
+                        <div class="form-group marginTop">
+                            <label>Дата рождения:</label>
+                            <input type="text" class="form-control"
+                                   id="userBirthdayEdit" name="userBirthdayEdit">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-label-group marginTop">
+                            <label>Список ролей:</label>
+                            <select multiple class="form-control" id="userRolesEdit" name="roles[]"></select>
+                        </div>
+                        <div class="form-group marginTop">
+                            <label>Картинки:</label>
+                            <input type="text" class="form-control"
+                                   id="userImageEdit" name="userImageEdit">
+                        </div>
+                        <div class="form-group marginTop">
+                            <label>Купоны:</label>
+                            <input type="text" class="form-control"
+                                   id="userCouponEdit" name="userCouponEdit">
+                        </div>
+                        <div class="form-group marginTop">
+                            <label>Корзина:</label>
+                            <input type="text" class="form-control"
+                                   id="userCartEdit" name="userCartEdit">
+                        </div>
+                        <div class="form-group marginTop">
+                            <label>Заказы:</label>
+                            <input type="text" class="form-control"
+                                   id="userOrdersEdit" name="userOrdersEdit">
+                        </div>
+                        <div class="form-group marginTop">
+                            <label>Отзывы:</label>
+                            <input type="text" class="form-control"
+                                   id="userReviewsEdit" name="userReviewsEdit">
+                        </div>
+                        <div class="form-group marginTop">
+                            <label>Магазины:</label>
+                            <input type="text" class="form-control"
+                                   id="userShopEdit" name="userShopEdit">
+                        </div>
+                        <div class="form-group marginTop">
+                            <label>Избранное:</label>
+                            <input type="text" class="form-control"
+                                   id="userFavoriteEdit" name="userFavoriteEdit">
+                        </div>
+                        <div class="form-group marginTop">
+                            <label>Скидки:</label>
+                            <input type="text" class="form-control"
+                                   id="userDiscountEdit" name="userDiscountEdit">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer marginTop">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                    <button type="submit" class="btn btn-primary">Изменить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

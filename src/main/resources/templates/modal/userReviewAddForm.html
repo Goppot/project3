@@ -1,0 +1,48 @@
+<div id="userReviewAddForm" class="modal fade" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editModalLabel">Добавление отзыва</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="container modal-body">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group marginTop">
+                            <label>Плюсы :</label>
+                            <input type="text" class="form-control"
+                                   id="reviewDignityAdd" name="reviewDignityAdd">
+                        </div>
+                        <div class="form-group marginTop">
+                            <label>Минусы:</label>
+                            <input type="text" class="form-control"
+                                   id="reviewFlawAdd"
+                                   name="reviewFlawAdd">
+                        </div>
+                        <div class="form-group marginTop">
+                            <label for="reviewTextAdd">Текст:</label>
+                            <textarea class="form-control"
+                                   id="reviewTextAdd" name="reviewTextAdd">
+                            </textarea>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group marginTop">
+                            <label>Рейтинг:</label>
+                            <input type="number" class="form-control"
+                                   id="reviewRatingAdd" name="reviewRatingAdd">
+                        </div>
+                        <div class="form-group marginTop">
+                            <label>Изображение:</label>
+                            <input type="file" class="form-control"
+                                   id="logoAdd" name="logoAdd">
+                        </div>
+                    </div>
+                <div class="modal-footer marginTop">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                    <button type="submit" class="btn btn-primary">Сохранить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+<dataset>
+    <shop id="1"
+          name="shop1"
+          email="shop1@mail.ru"
+          phone="7777777"
+          description="shop1"
+          count="1"
+          rating="1"
+          is_moderated="0"
+          is_moderate_accept="0"
+          moderated_reject_reason="null"
+          activity="1"
+          is_pretendent_to_be_deleted="0"
+    />
+
+    <user id="1"
+          email="user@mail.ru"
+          username="username"
+          password="password"
+          activate="1"
+          age="10"
+    />
+
+    <!--    <shop id="1" activity="0" count="0" description="shop1_description" email="shop1@mail" is_moderate_accept="0"-->
+    <!--          is_moderated="0" is_pretendent_to_be_deleted="0" name="shop1" phone="shop1_phone" rating="0.0" location_id="1"-->
+    <!--          logo_id="9"-->
+    <!--    />-->
+    <!--    <shop id="2" activity="0" count="0" description="shop2_description" email="shop2@mail" is_moderate_accept="0"-->
+    <!--          is_moderated="0" is_pretendent_to_be_deleted="0" name="shop2" phone="shop2_phone" rating="0.0" location_id="2"-->
+    <!--          logo_id="10"-->
+
+    <!--    />-->
+    <!--    <shop id="3" activity="0" count="0" description="shop3_description" email="shop3@mail" is_moderate_accept="0"-->
+    <!--          is_moderated="0" is_pretendent_to_be_deleted="0" name="shop3" phone="shop3_phone" rating="0.0" location_id="3"-->
+    <!--          logo_id="11"-->
+
+    <!--    />-->
+</dataset>

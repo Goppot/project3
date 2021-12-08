@@ -1,0 +1,32 @@
+<dataset>
+    <user id="1"
+          email="user@mail.ru"
+          username="username"
+          password="password"
+          activate="1"
+          age="10"
+    />
+
+    <user id="2"
+          email="user2@mail.ru"
+          username="username2"
+          password="password2"
+          activate="1"
+          age="12"
+    />
+
+    <user id="3"
+          email="user3@mail.ru"
+          username="username3"
+          password="password3"
+          activate="1"
+          age="13"
+    />
+
+    <role id="1" role_name="User"/>
+
+    <user_role user_id="1" role_id="1"/>
+    <user_role user_id="2" role_id="1"/>
+    <user_role user_id="3" role_id="1"/>
+
+</dataset>

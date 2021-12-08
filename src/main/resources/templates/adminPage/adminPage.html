@@ -1,0 +1,113 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin-page</title>
+    <link rel="stylesheet" type="text/css" href="/css/styleAdminPanel.css"/>
+</head>
+<body>
+<!--шапка навигация-->
+<nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-1">
+    <span class="navbar-brand col-md-3 col-lg-2 mr-0 px-3">
+         Приветствую администратор: Тебя!
+        <!--        <b th:text="${admin.username}"></b>-->
+    </span>
+    <table>
+        <thead>
+        <tr>
+            <th>
+                <button type="button" class="btn btn-light">Переключиться на режим модератора</button>
+            </th>
+            <th class="navbar-nav px-3 nav-item text-nowrap">
+                <a class="nav-link" th:href="@{/logout}">Выйти</a></th>
+        </tr>
+
+        </thead>
+    </table>
+</nav>
+<!--админская навигация-->
+<div class="marginTop">
+    <div class="tableStyle">
+        <div class="row">
+            <!--список навигации по названиям-->
+            <div class="col-md-2">
+                <div class="nav flex-column nav-pills me-3" id="v-pills-tab-AdminPanel" role="tablist"
+                     aria-orientation="vertical">
+
+                    <a class="nav-link" href="/homepage">На главную</a>
+                    <button class="nav-link" id="v-pills-Shops" data-bs-toggle="pill"
+                            data-bs-target="#v-pills-AllShops" type="button" role="tab" aria-controls="v-pills-Shops"
+                            aria-selected="true" style="text-align: left">Магазины
+                    </button>
+                    <button class="nav-link" id="v-pills-Users" data-bs-toggle="pill"
+                            data-bs-target="#v-pills-AllUsers" type="button" role="tab" aria-controls="v-pills-Users"
+                            aria-selected="false" style="text-align: left">Пользователи
+                    </button>
+                    <button class="nav-link" id="v-pills-Items" data-bs-toggle="pill"
+                            data-bs-target="#v-pills-AllItems" type="button" role="tab" aria-controls="v-pills-Products"
+                            aria-selected="false" style="text-align: left">Товары
+                    </button>
+                    <button class="nav-link" id="v-pills-Addresses" data-bs-toggle="pill"
+                            data-bs-target="#v-pills-AllAddresses" type="button" role="tab"
+                            aria-controls="v-pills-Addresses"
+                            aria-selected="false" style="text-align: left">Адреса
+                    </button>
+                    <button class="nav-link" id="v-pills-Categories" data-bs-toggle="pill"
+                            data-bs-target="#v-pills-AllCategories" type="button" role="tab"
+                            aria-controls="v-pills-Categories"
+                            aria-selected="false" style="text-align: left">Категории
+                    </button>
+                </div>
+            </div>
+            <!--таблицы список магазинов,пользователей,айтемов,адреса,категории-->
+            <div class="col-md-10">
+                <div class="tab-content" id="v-pills-tabContent">
+                    <!--Нажали на Магазины-->
+                    <div th:replace="adminPage/fragments/shops"/>
+                    <div th:replace="adminPage/fragments/modal/shopAddForm"/>
+                    <div th:replace="adminPage/fragments/modal/shopEditForm"/>
+                    <div th:replace="adminPage/fragments/modal/deleteForm"/>
+                    <!--Нажали на Пользователей-->
+                    <div th:replace="adminPage/fragments/users"/>
+                    <div th:replace="adminPage/fragments/modal/userAddForm"/>
+                    <div th:replace="adminPage/fragments/modal/userEditForm"/>
+                    <div th:replace="adminPage/fragments/modal/deleteForm"/>
+                    <!--Нажали на товары-->
+                    <div th:replace="adminPage/fragments/items"/>
+                    <div th:replace="adminPage/fragments/modal/itemAddForm"/>
+                    <div th:replace="adminPage/fragments/modal/itemEditForm"/>
+                    <div th:replace="adminPage/fragments/modal/deleteForm"/>
+                    <!--Нажали на Адреса-->
+                    <div th:replace="adminPage/fragments/addresses"/>
+                    <div th:replace="adminPage/fragments/modal/deleteForm"/>
+                    <div th:replace="adminPage/fragments/modal/countryEditForm"/>
+                    <div th:replace="adminPage/fragments/modal/cityEditForm"/>
+                    <div th:replace="adminPage/fragments/modal/addressEditForm"/>
+                    <div th:replace="adminPage/fragments/modal/countryAddForm"/>
+                    <div th:replace="adminPage/fragments/modal/cityAddForm"/>
+                    <div th:replace="adminPage/fragments/modal/addressAddForm"/>
+                    <!--Нажали на Категории-->
+                    <div th:replace="adminPage/fragments/categories"/>
+                    <div th:replace="adminPage/fragments/modal/сategoryAddForm"/>
+                    <div th:replace="adminPage/fragments/modal/сategoryEditForm"/>
+                    <div th:replace="adminPage/fragments/modal/deleteForm"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/webjars/jquery/3.6.0/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/js/admin/adminNavigationJs.js"></script>
+<script type="text/javascript" src="/js/admin/adminShops.js"></script>
+<script type="text/javascript" src="/js/admin/adminUsers.js"></script>
+<script type="text/javascript" src="/js/admin/adminItems.js"></script>
+<script type="text/javascript" src="/js/admin/adminCountries.js"></script>
+<script type="text/javascript" src="/js/admin/adminCities.js"></script>
+<script type="text/javascript" src="/js/admin/adminAddresses.js"></script>
+<script type="text/javascript" src="/js/admin/adminCategories.js"></script>
+<script type="text/javascript" src="/js/admin/adminDeleteFromDataBase.js"></script>
+</body>
+</html>

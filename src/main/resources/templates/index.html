@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/css/homePageStyle.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div class="jumbotron jumbotron-fluid">
+    <div class="nav_panel">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">Shop24</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarNavAltMarkup"
+                        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link " aria-current="page" href="#">Избранное</a>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <h5 sec:authorize="hasAuthority('ADMIN')">
+                        <a href="/admin" class="user-tag" id="adminTag" sec:authorize="isAuthenticated()"
+                           sec:authentication="principal.username"></a></h5>
+                    <h5 sec:authorize="hasAuthority('USER')">
+                        <a href="/user" class="user-tag" id="userTag" sec:authorize="isAuthenticated()"
+                           sec:authentication="principal.username"></a></h5>
+                    <button sec:authorize="isAnonymous()" class="btn btn-outline-success"
+                            data-toggle="modal" data-target="#staticBackdrop">Войти
+                    </button>
+                    <form method="get" action="/logout" class="btn_danger_out">
+                        <button sec:authorize="isAuthenticated()" class="btn btn-outline-danger" type="submit">Выйти
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+<!-- Modal Sign In-->
+<div class="modal fade" id="staticBackdrop" data-bs-keyboard="false" tabindex="-1"
+     aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="image-header">
+                    <img src="https://covr.org/wp-content/uploads/Amazon-swoop-145x100.jpg"
+                         alt="https://d2u3dcdbebyaiu.cloudfront.net/uploads/atch_img/172/69ae45600772983179fe0d89b3f3cc1b_crop.jpeg">
+                </div>
+                <!--                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
+            </div>
+
+
+                    <div class="modal-body">
+                        <form method="post" action="/index">
+                            <div class="mb-3">
+                                <label for="SignInUsername" class="form-label">Имя пользователя</label>
+                                <input type="text" placeholder="Username" class="form-control"
+                                       id="SignInUsername" name="username">
+                                <div id="emailHelp" class="form-text"></div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="SignInPassword" class="form-label">Пароль</label>
+                                <input type="password" placeholder="Password" class="form-control"
+                                       id="SignInPassword" name="password">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="flexCheckDefault"
+                                           name="remember-me">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Запомнить пароль
+                                    </label>
+                                </div>
+                                <div class="button-in">
+                                    <button type="submit" class="btn btn-warning">Войти</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <a id="registrationButtonModal" class="input-button" href="#">Зарегистрироваться</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--    Modal Sign In  -->
+
+
+        <!--    Modal Basket-->
+
+        <div class="modal fade" id="staticBackdropBasket" data-backdrop="static" data-keyboard="false"
+             tabindex="-1"
+             aria-labelledby="staticBackdropLabelBasket" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h6 class="modal-title" id="staticBackdropLabelBasket">Список ваших товаров:</h6>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <table>
+                            <thead>
+                            <tr>
+                                <td>Наименование товара</td>
+                                <td>&nbsp;</td>
+                                <td colspan="3">Количество</td>
+                                <td>&nbsp;</td>
+                                <td>Цена</td>
+                                <td>&nbsp;</td>
+                                <td>Сумма</td>
+                                <td>&nbsp;</td>
+                                <td></td>
+                            </tr>
+                            </thead>
+                            <tbody id="cartItemsList">
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <div class="modal-footer">
+                        <span class="user-tag" sec:authorize="isAnonymous()"> Для оформления заказа необходимо зарегистрироваться и выполнить вход в систему</span>
+                        <button type="button" sec:authorize="isAuthenticated()" class="btn btn-success" data-dismiss="modal">Оформить заказ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!--    Modal Favorite-->
+
+<div class="modal fade" id="staticBackdropFavorite" data-backdrop="static" data-keyboard="false"
+     tabindex="-1"
+     aria-labelledby="staticBackdropLabelFavorite" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h6 class="modal-title" id="staticBackdropLabelFavorite">Избранное:</h6>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table>
+                    <thead>
+                    <tr>
+                        <td>Наименование товара</td>
+                        <td>&nbsp;</td>
+                        <td>Цена</td>
+                        <td>&nbsp;</td>
+                        <td></td>
+                    </tr>
+                    </thead>
+                    <tbody id="favoriteList">
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--    Modal Basket-->
+
+
+        <div class="container">
+            <h1 class="display-4">Shops 24</h1>
+            <p class="lead">Товары свободные от наценок</p>
+        </div>
+        <div class="top">
+            <!--        блок над окном поиска, пустой отступ        -->
+        </div>
+        <div class="top_search">
+            <div class="search">
+                <!-- Пример отдельной кнопки danger -->
+                <div class="btn-group">
+                    <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown"
+                            aria-expanded="false">
+                        Каталог товаров
+                    </button>
+                    <ul id="categoryItems" class="dropdown-menu">
+
+                    </ul>
+                </div>
+            </div>
+
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Sea">
+                <button class="btn btn-outline-success" type="submit">Поиск</button>
+            </form>
+
+
+            <div class="favorite" sec:authorize="isAuthenticated()">
+        <form action="#">
+            <button type="button" class="btn btn-outline-warning" data-toggle="modal"
+                    data-target="#staticBackdropFavorite">Избранное
+            </button>
+        </form>
+    </div>
+    <div class="basket">
+                <form action="#">
+                    <button type="button" class="btn btn-outline-warning" data-toggle="modal"
+                            data-target="#staticBackdropBasket">Корзина
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<div id="cartItems" class="popular">
+    <h3>Популярные товары</h3>
+    <div id="cardsPopularItems">
+
+    </div>
+
+
+    <h3>Популярные магазины</h3>
+    <div id="cardsPopularShops">
+
+    </div>
+</div>
+
+<!--модульное окно для регистрации пользователя -->
+<div class="modal registrationForm">
+    <div class=" mx-auto col-lg-4">
+        <form class="p-4 p-md-5 border rounded-3 bg-light" id="newUserForm">
+            <button type="button" class="btn-close" aria-label="Close"></button>
+            <div class="form-floating my-3" id="email">
+                <input type="email" class="form-control email" name="email">
+                <label for="email">Email address</label>
+                <div class="alert alert-danger collapse" role="alert" id="emailAlert">
+                </div>
+            </div>
+            <div class="form-floating mb-3" id="username">
+                <input class="form-control username" name="username">
+                <label for="username">User Name</label>
+                <div class="alert alert-danger collapse" role="alert" id="usernameAlert">
+                </div>
+            </div>
+            <div class="form-floating mb-3">
+                <input class="form-control firstName" id="firstName" name="firstName">
+                <label for="firstName">First Name</label>
+                <div class="alert alert-danger collapse" role="alert" id="firstNameAlert">
+                </div>
+            </div>
+            <div class="form-floating mb-3">
+                <input class="form-control lastName" id="lastName" name="lastName">
+                <label for="lastName">Last Name</label>
+                <div class="alert alert-danger collapse" role="alert" id="lastNameAlert">
+                </div>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control password" id="password" name="password">
+                <label for="password">Password</label>
+                <div class="alert alert-danger collapse" role="alert" id="passwordAlert">
+                </div>
+            </div>
+            <div class="form-floating mb-2">
+                <input type="tel" class="form-control phone" id="phone" value="+7" name="phoneNumber">
+                <label for="phone">Phone Number</label>
+                <div class="alert alert-danger collapse" role="alert" id="phoneAlert">
+                </div>
+            </div>
+            <h6 class="mb-2 pb-1 gender-label">Gender: </h6>
+            <div class="my-3" id="gender-check">
+                <div class="form-check">
+                    <input id="male" name="gender" type="radio" class="form-check-input" required="" value="MALE"
+                           checked>
+                    <label class="form-check-label" for="male">Male</label>
+                </div>
+                <div class="form-check">
+                    <input id="female" name="gender" type="radio" class="form-check-input" required=""
+                           value="FEMALE">
+                    <label class="form-check-label" for="female">Female</label>
+                </div>
+                <div class="form-check">
+                    <input id="UNKNOWN" name="gender" type="radio" class="form-check-input" required=""
+                           value="UNKNOWN">
+                    <label class="form-check-label" for="UNKNOWN">Other</label>
+                </div>
+            </div>
+            <div class="form-floating mb-2">
+                <input type="number" class="form-control age" id="age" name="age">
+                <label for="age">Age</label>
+                <div class="alert alert-danger collapse" role="alert" id="ageAlert">
+                </div>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input type="date" class="form-control birthday" id="birthday" name="birthday">
+                <label for="birthday">Date of birth:</label>
+                <div class="alert alert-danger collapse" role="alert" id="birthdayAlert">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="avatar" class="form-label">User avatar</label>
+                <input class="form-control avatarImage" accept="image/*" type="file" id="avatar" name="avatar">
+            </div>
+            <button class="w-100 btn btn-lg btn-warning registrationButton" type="button" id="registrationButton"
+                    onclick="">
+                Регистрация
+            </button>
+            <div class="alert alert-danger collapse" role="alert" id="isExistAlert">
+            </div>
+            <div class="alert alert-success collapse" role="alert" id="successfulRegistration">
+                User have been registered
+            </div>
+
+        </form>
+    </div>
+</div>
+<script src="/js/admin.js"></script>
+<script src="/js/registration.js"></script>
+<script src="/js/cart.js"></script>
+<script src="/js/favorite.js"></script>
+</body>
+</html>

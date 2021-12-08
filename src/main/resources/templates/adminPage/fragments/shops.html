@@ -1,0 +1,44 @@
+<div class="tab-pane fade show active" id="v-pills-AllShops" role="tabpanel"
+     aria-labelledby="v-pills-Shops">
+    <div>
+        <h2>Список всех магазинов</h2>
+        <div class="marginTop">
+            <div class="row">
+                <div class="col-1"><span>Поиск:</span></div>
+                <div class="col-7">
+                    <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                        <input type="search" class="form-control form-control-dark"
+                               placeholder="введите данные поиска" aria-label="Search">
+                    </form>
+                </div>
+                <div class="col">
+                    <div class="d-grid gap-1">
+                        <button data-bs-toggle="modal" data-bs-target="#shopsAddFormModal" class="btn btn-success">Создать магазин</button>
+                    </div>
+                </div>
+            </div>
+            <div class="marginTop table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Название</th>
+                        <th>Электронная почта</th>
+                        <th>Телефон</th>
+                        <th>Описание</th>
+                        <th>Адрес</th>
+                        <th>Логотип</th>
+                        <th>Рейтинг</th>
+                        <th>Владелец</th>
+                        <th>Список товаров</th>
+                        <th>Редактирование</th>
+                        <th>Удаление</th>
+                    </tr>
+                    </thead>
+                    <tbody id="shopsTable">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,4 @@
+<dataset>
+    <item id="1" count="2" description="Test" discount="1" is_moderate_accept="false" is_moderated="false"
+          pretendent_to_be_deleted="true" moderated_reject_reason="1" name="Test" price="2000.00" rating="0"/>
+</dataset>

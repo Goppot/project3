@@ -1,0 +1,15 @@
+<dataset>
+<shop id="1"
+      name="shop1"
+      email="shop1@mail.ru"
+      phone="7777777"
+      description="shop1"
+      count="1"
+      rating="1"
+      is_moderated="0"
+      is_moderate_accept="0"
+      moderated_reject_reason="null"
+      activity="1"
+      is_pretendent_to_be_deleted="0"
+/>
+</dataset>

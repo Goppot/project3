@@ -1,0 +1,9 @@
+<dataset>
+    <item id="1" count="2" description="Test" discount="1" is_moderate_accept="false" is_moderated="false"
+          pretendent_to_be_deleted="false" moderated_reject_reason="1" name="Test" price="2000.00" rating="0"/>
+    <shop id="1" activity="1" count="1" description="Test"  email="Test@mail" is_moderate_accept="false"
+          is_moderated="false" is_pretendent_to_be_deleted="false" moderated_reject_reason="Test"  name="Alibaba"
+          phone="Test" rating="0"/>
+    <category id="1" name="Sport"/>
+    <shop_item shop_id="1" item_id="1" />
+</dataset>

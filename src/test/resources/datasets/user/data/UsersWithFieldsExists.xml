@@ -1,0 +1,12 @@
+<dataset>
+    <user
+            age="0"
+            email="exist_email@mail.ru"
+            first_name="first_name_test"
+            last_name="last_name_test"
+            phone="exists_phone"
+            username="exists_username"
+            activate="false"
+    />
+
+</dataset>

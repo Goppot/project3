@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+</head>
+<body>
+
+<div class="nav_panel ">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom ">
+        <div class="container-fluid ">
+            <h4><img src="https://covr.org/wp-content/uploads/Amazon-swoop-145x100.jpg" alt="" height="20" width="30">
+                <a href="/" class="heading">Магазины</a>
+                <a href="" class="heading">Товары</a>
+                <a th:href="@{/user/{id}/userlist (id=${user.id})}" class="heading">Список покупателей</a>
+                <a href="" class="heading">Еще...</a></h4>
+            <div class="btn_danger_out">
+                <a href="/logout"><button class="btn btn-outline-danger ">Sign Out</button></a>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<div class="container-fluid ">
+    <div class="row ">
+        <div class="col-2 " th:object="${user}">
+
+            <img attr="" src="" height="150" width="150" id="avatar-image" class="avatar-image">
+            <input type="hidden" th:value="${''+user.images.picture}" class="avatar-byte-array">
+            <h4 th:text="*{username}">User Name</h4>
+
+            <hr/>
+            <div>
+                <input type="hidden" th:value="${user.getId()}" class="user-id">
+                <h5>Возвраст: <b th:text="*{age}">?</b>
+                </h5>
+                <h5>Пол: <b th:text="*{gender}">?</b></h5>
+                <h5>Страна: <b
+                        th:text="${user.getAddress() != null ? user.getAddress().getCountry():'no country'}">?</b>
+                </h5>
+                <h5>Город: <b
+                        th:text="${ user.getAddress() != null? user.getAddress().getCity(): 'no city'}">?</b>
+                </h5>
+                <h5>Улица: <b th:text="${user.getAddress() != null? user.getAddress().getStreet(): 'no address'}">?</b>
+                </h5>
+                <h5>Почта: <b th:text="*{email}">?</b></h5>
+                <h5>Телефон: <b th:text="*{phone}">?</b></h5>
+            </div>
+            <hr/>
+            <div class="links">
+                <h5><a th:href="@{/user-cart-page}">Корзина</a></h5>
+                <h5><a th:href="@{/user-orders}">История заказов</a></h5>
+                <h5><a th:href="@{/user-item}">Проданные товары</a></h5>
+            </div>
+        </div>
+        <div class="col-10">
+            <div class="container user-navlinks">
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="btn btn btn-outline-warning active" id="user-shops-tab" data-bs-toggle="pill"
+                                data-bs-target="#user-shops" type="button" role="tab" aria-controls="user-shops"
+                                aria-selected="true">Мои Магазины
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="btn btn btn-outline-warning" id="pills-profile-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+                                aria-selected="false">Мои Заказы
+                        </button>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="container container-content">
+                <div class="tab-content " id="pills-tabContent">
+                    <div class="tab-pane fade show active " id="user-shops" role="tabpanel"
+                         aria-labelledby="user-shops-tab">
+                    </div>
+
+                    <div class="tab-pane  items-table" id="pills-profile" role="tabpanel"
+                         aria-labelledby="pills-profile-tab">
+
+                        <div class="card mb-4 rounded-3 shadow-sm">
+                            <div class="card-header py-3">
+                                <b>Заказы от</b>
+                            </div>
+                            <div class="card-body">
+                                <h5>Адрес доставки:</h5>
+                                <table class="table" id="items-table">
+                                    <tr>
+                                        <th>Изображение</th>
+                                        <th>Имя товара</th>
+                                        <th>Категории</th>
+                                        <th>Цена</th>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="card-header py-3">
+                                <b>Сумма заказа</b>
+                            </div>
+                        </div>
+                    </div>
+                    <div th:replace="modal/userShopAddForm"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+        integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
+        integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
+        crossorigin="anonymous"></script>
+<script src="/js/UserPage.js"></script>
+<link rel="stylesheet"  href="/css/UserPageStyle.css"/>
+</body>
+
+
+</html>

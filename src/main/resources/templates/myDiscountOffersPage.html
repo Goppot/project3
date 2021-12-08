@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+
+    <title>SuperTitle</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <linK rel="stylesheet" href="css/homePageStyle.css">
+
+</head>
+
+<body>
+<div class="jumbotron jumbotron-fluid">
+    <div class="nav_panel">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">Shop24</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup"
+                        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link " aria-current="page" href="#">Избранное</a>
+                    </div>
+                </div>
+                <div class="d-flex">
+
+                    <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        Sign In
+                    </button>
+
+                    <div class="btn_danger_out">
+                        <button class="btn btn-outline-danger ">Sign Out</button>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+
+        <!-- Modal Sign In-->
+        <div class="modal fade" id="staticBackdrop" data-bs-keyboard="false" tabindex="-1"
+             aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <div class="image-header">
+                            <img src="https://covr.org/wp-content/uploads/Amazon-swoop-145x100.jpg"
+                                 alt="https://d2u3dcdbebyaiu.cloudfront.net/uploads/atch_img/172/69ae45600772983179fe0d89b3f3cc1b_crop.jpeg">
+                        </div>
+                    </div>
+
+
+                    <div class="modal-body">
+
+                        <form>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Адрес электронной почты</label>
+                                <input type="email" placeholder="Email" class="form-control" id="exampleInputEmail1"
+                                       aria-describedby="emailHelp">
+                                <div id="emailHelp" class="form-text"></div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Пароль</label>
+                                <input type="password" placeholder="Password" class="form-control"
+                                       id="exampleInputPassword1">
+
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        Запомнить пароль
+                                    </label>
+                                </div>
+                                <div class="button-in">
+                                    <button type="button" class="btn btn-warning">Войти</button>
+                                </div>
+
+
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="modal-footer">
+                        <h6 class="text-footer">если Вы у нас впервые:</h6>
+
+                        <a id="registrationButtonModal" class="input-button" href="#">зарегистрироваться</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--    Modal Sign In  -->
+
+        <!--    Modal Basket-->
+
+        <div class="modal fade" id="staticBackdropBasket" data-bs-backdrop="static" data-bs-keyboard="false"
+             tabindex="-1"
+             aria-labelledby="staticBackdropLabelBasket" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h6 class="modal-title" id="staticBackdropLabelBasket">Список ваших товаров:</h6>
+                        <h5>-</h5>
+                        <h5>-</h5>
+                        <h5>-</h5>
+                        <h5>-</h5>
+                        <h5>-</h5>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Оформить заказ</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--    Modal Basket-->
+
+
+        <div class="container">
+            <h1 class="display-4">Shops 24</h1>
+            <p class="lead">Товары свободные от наценок</p>
+        </div>
+        <div class="top">
+            <!--        блок над окном поиска, пустой отступ        -->
+        </div>
+        <div class="top_search">
+            <div class="search">
+                <!-- Пример отдельной кнопки danger -->
+                <div class="btn-group">
+                    <button type="button" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                        Каталог товаров
+                    </button>
+                    <ul id="categoryItems" class="dropdown-menu">
+
+                    </ul>
+                </div>
+            </div>
+
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Sea">
+                <button class="btn btn-outline-success" type="submit">Поиск</button>
+            </form>
+
+
+            <div class="basket">
+                <form action="#">
+                    <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdropBasket">Корзина
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+<hr class="line_hr">
+
+
+<div class="discountShops">
+    <center><h3>Индивидуальные предложения</h3></center>
+
+</div>
+
+
+<script src="../static/js/discountScript.js"></script>
+
+
+</body>
+</html>

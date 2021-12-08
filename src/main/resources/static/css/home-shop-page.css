@@ -1,0 +1,58 @@
+.home-shop-right-body{
+    text-align: center;
+}
+.item-div img{
+    width: 150px;
+}
+.item-div{
+    border: solid 1px #dbdbdb;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    text-align: left
+}
+.item-div{
+    display:inline-block;
+}
+.basket-div img{
+    width: 150px;
+}
+.basket-div{
+    border: solid 1px #dbdbdb;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    text-align: left
+}
+.basket-img-div{
+    display:inline-block;
+}
+.basket-text-div{
+    display:inline-block;
+}
+
+.login-form{
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    overflow: auto;
+    max-height: 100vh;
+    width: 100%;
+}
+.login-content{
+    padding: 10px;
+    width: 400px;
+    height: 400px;
+    max-width: 800px;
+    max-height: 800px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.item-present.button {
+    margin-left: 20px;
+}

@@ -1,0 +1,32 @@
+<dataset>
+    <user
+            id="1"
+            age="60"
+            email="email_test@mail.ru"
+            first_name="first_name_test"
+            last_name="last_name_test"
+            phone="+7777777777"
+            username="username_test"
+            activate="false"
+    />
+
+    <shop
+            id="1"
+            description="test_description"
+            email="test_shop@mail.ru"
+            is_moderate_accept="true"
+            is_moderated="true"
+            is_pretendent_to_be_deleted="false"
+            moderated_reject_reason="no reason"
+            name="test_shop"
+            phone="test_phone"
+            rating="5.5"
+            activity="1"
+            count="100"
+    />
+    <user_shop
+            user_id="1"
+            shop_id="1"
+    />
+
+</dataset>

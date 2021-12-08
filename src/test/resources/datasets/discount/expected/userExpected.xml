@@ -1,0 +1,9 @@
+<dataset>
+    <user id="1"
+          email="user@mail.ru"
+          username="username"
+          password="password"
+          activate="1"
+          age="10"
+    />
+</dataset>

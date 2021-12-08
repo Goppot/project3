@@ -1,0 +1,316 @@
+.section {
+    margin-top: 50px
+
+}
+
+.container2 {
+    padding-right: 400px;
+    padding-left: 600px;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+html {
+    font-size: 16px;
+    min-height: 100%
+}
+
+a {
+    text-decoration: none;
+    color: inherit
+}
+
+a:hover,
+a:focus {
+    color: #01b7f2;
+    text-decoration: none
+}
+
+a:focus {
+    outline: none
+}
+
+p {
+    font-size: 1.0833em;
+    line-height: 1.6666;
+    margin-bottom: 15px
+}
+
+dt {
+    font-weight: normal
+}
+
+span.active,
+a.active,
+h2.active,
+h3.active,
+h4.active,
+h5.active,
+h6.active {
+    color: #01b7f2
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 15px;
+    font-weight: normal;
+    color: #2d3e52
+}
+
+h1 {
+    font-size: 2em;
+    line-height: 1.25em
+}
+
+h2 {
+    font-size: 1.6667em;
+    line-height: 1.25em
+}
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.2222em
+}
+
+h4 {
+    font-size: 1.3333em;
+    line-height: 1.25em
+}
+
+h5 {
+    font-size: 1.1666em;
+    line-height: 1.1428em
+}
+
+h6 {
+    font-size: 1em
+}
+
+h1.fourty-space {
+    font-size: 1.3333em;
+    line-height: 1.25em;
+    letter-spacing: .04em
+}
+
+h2.fourty-space {
+    font-size: 1.1666em;
+    line-height: 1.1428em;
+    letter-spacing: .04em
+}
+
+h3.fourty-space {
+    font-size: 1.0833em;
+    line-height: 1.1428em;
+    letter-spacing: .04em
+}
+
+h4.fourty-space {
+    font-size: 1em;
+    line-height: 1.1em;
+    letter-spacing: .04em
+}
+
+h5.fourty-space {
+    font-size: 0.9166;
+    line-height: 1.1em;
+    letter-spacing: .04em
+}
+
+h6.fourty-space {
+    font-size: 0.8333em;
+    line-height: 1.1em;
+    letter-spacing: .04em
+}
+
+ol,
+ul {
+    list-style: none;
+    margin: 0
+}
+
+.banner .med-caption {
+    font-size: 2.5em
+}
+
+.box-title {
+    margin-bottom: 2em;
+    line-height: 1.5em
+}
+
+.box-title small {
+    font-size: 12px;
+    color: #838383;
+    text-transform: uppercase;
+    display: block;
+    margin-top: 10px
+}
+
+button,
+input[type="button"].button,
+a.button {
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 0 15px;
+    white-space: nowrap
+}
+
+button.btn-small,
+input[type="button"].button.btn-small,
+a.button.btn-small {
+    height: 40px;
+    padding: 0 39px;
+    line-height: 40px;
+    font-size: 0.9167em
+}
+
+a.button {
+    display: inline-block;
+    background: #5f5ffc;
+    font-size: 0.8333em;
+    line-height: 1.8333em;
+    white-space: nowrap;
+    text-align: center
+}
+
+a.button:hover {
+    background: #dbe867
+}
+
+button.yellow,
+a.button.yellow,
+input[type="button"].button.yellow {
+    background: #98ce44
+}
+
+button.yellow:hover,
+a.button.yellow:hover,
+input[type="button"].button.yellow:hover {
+    background: #98ce44
+}
+
+
+.price {
+    color: #7db921;
+    font-size: 1.6667em;
+    text-transform: uppercase;
+    float: right;
+    text-align: right;
+    line-height: 1;
+    display: block
+}
+
+.price small {
+    display: block;
+    color: #838383;
+    font-size: 0.5em
+}
+
+
+.listing-style1.hotel .feedback {
+    margin: 5px 0;
+    border-top: 1px solid #f5f5f5;
+    padding-top: 1px;
+    border-bottom: 1px solid #f5f5f5
+}
+
+.listing-style1.hotel .action .button:last-child {
+    float: right
+}
+
+.box {
+    flex: 1 1 25%;
+    padding: 10px;
+    margin: 10px;
+    border: 0.1px solid #000000
+}
+
+.fa {
+    color: #f0715f
+}
+.d-flex {
+    width: 700px;
+}
+
+.popular_shops {
+    float: left;
+    margin: 30px 5px 130px 30px;
+}
+
+.navbar-brand {
+    padding-left: 20px;
+}
+
+.search {
+    display: flex;
+    position: absolut;
+    left: 30%;
+}
+
+.btn-group {
+    height:100%;
+    margin-left: 30%;
+    margin-right: 100px;
+}
+
+.basket {
+    margin-right: 20%;
+    margin-left: 100px;
+}
+
+.btn_danger_out {
+    margin-left: 10px;
+}
+
+.display-4 {
+    padding-top: 10px;
+}
+
+.jumbotron {
+    background-color: #eeeeee;
+    padding-top: 20px;
+}
+
+.lead {
+    padding-bottom: 20px;
+}
+
+.top_search {
+    padding-top: 30px;
+    display: flex
+}
+
+.text-footer {
+    color: white;
+    padding-right: 15px;
+}
+
+.input-button {
+    padding-right: 160px;
+}
+
+.button-in {
+    padding: 30px 300px 0 150px;
+}
+
+.form-check {
+    padding-top: 10px;
+
+}
+
+.image-header {
+    padding-left: 155px;
+    padding-top: 55px;
+    padding-bottom: 65px;
+}
+.alert {
+    margin-top: 5px;
+}
+
+
+

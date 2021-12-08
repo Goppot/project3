@@ -1,0 +1,4 @@
+<dataset>
+    <review id="1" date="2021-09-26 17:48:51" dignity="dignity_review_user4" flaw="flaw_review_user4" is_moderate_accept="0" is_moderated="0" rating="4" text="text_review_user4" shop_id="1" user_id="1"/>
+    <review id="2" date="2021-09-26 17:48:51" dignity="dignity_review_user5" flaw="flaw_review_user5" is_moderate_accept="0" is_moderated="1" rating="5" text="text_review_user5" shop_id="1" user_id="1"/>
+</dataset>

@@ -1,0 +1,38 @@
+<dataset>
+    <user
+            id="1"
+            age="60"
+            email="email_test@mail.ru"
+            first_name="first_name_test"
+            last_name="last_name_test"
+            phone="+7777777777"
+            username="username_test"
+            activate="false"
+    />
+    <orders
+            id="1"
+    />
+    <item
+            id="1"
+            count="500"
+            description="test_item"
+            is_moderate_accept="true"
+            is_moderated="true"
+            pretendent_to_be_deleted="false"
+            moderated_reject_reason="no reason"
+            name="test_item"
+            price="500"
+            rating="5.5"
+    />
+    <user_orders
+            user_id="1"
+            orders_id="1"
+    />
+
+    <orders_item
+            orders_id="1"
+            item_id="1"
+    />
+
+
+</dataset>
